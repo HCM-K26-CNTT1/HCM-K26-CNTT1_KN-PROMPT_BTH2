@@ -71,6 +71,8 @@ Quy tắc:
 
 ## PHẦN 2. KIỂM THỬ PROMPT
 
+### Kiểm thử 1
+
 **Input:**
 
 "Ứng dụng thường xuyên bị lỗi khi thanh toán. Tôi đã thử nhiều lần nhưng vẫn không thành công."
@@ -83,6 +85,57 @@ Quy tắc:
   "topics": ["System"],
   "score": 1,
   "summary": "Ứng dụng thường xuyên lỗi khi thanh toán"
+}
+```
+
+### Kiểm thử 2
+
+**Input:**
+
+"Sản phẩm có chất lượng tốt, đóng gói cẩn thận nhưng giao hàng hơi chậm."
+
+**Output:**
+
+```json
+{
+  "sentiment": "Positive",
+  "topics": ["Product", "Delivery"],
+  "score": 4,
+  "summary": "Sản phẩm tốt, đóng gói cẩn thận nhưng giao hàng chậm"
+}
+```
+
+### Kiểm thử 3
+
+**Input:**
+
+"Tôi đã liên hệ bộ phận hỗ trợ nhiều lần nhưng không nhận được phản hồi."
+
+**Output:**
+
+```json
+{
+  "sentiment": "Negative",
+  "topics": ["Service"],
+  "score": 1,
+  "summary": "Bộ phận hỗ trợ không phản hồi khách hàng"
+}
+```
+
+### Kiểm thử 4: Phản hồi quá ngắn, không đủ thông tin
+
+**Input:**
+
+"Ok"
+
+**Output:**
+
+```json
+{
+  "sentiment": "Invalid",
+  "topics": ["Invalid"],
+  "score": null,
+  "summary": "Invalid feedback"
 }
 ```
 
