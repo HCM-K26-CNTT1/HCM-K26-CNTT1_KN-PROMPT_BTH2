@@ -67,6 +67,7 @@ Quy tắc:
 - Summary dưới 15 từ.
 - Không tự thêm thông tin.
 - Chỉ trả về JSON thuần túy.
+- Nếu phản hồi trống, không đọc được hoặc quá ngắn, không đủ thông tin để xác định cảm xúc và chủ đề (ví dụ: "Ok", "Ừ", "Tốt"), trả về Invalid.
 ```
 
 ## PHẦN 2. KIỂM THỬ PROMPT
